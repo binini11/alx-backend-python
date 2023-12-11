@@ -7,11 +7,13 @@ seconds and eventually returns it.
 Use the random module.
 """
 
+
 import random
 import asyncio
 
+
 async def wait_random(max_delay: int = 10) -> float:
-    """ wait for some duration"""
+    """Wait for some time"""
     wait_time = random.random() * max_delay
     await asyncio.sleep(wait_time)
     return wait_time
